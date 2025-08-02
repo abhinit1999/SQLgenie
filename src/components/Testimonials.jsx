@@ -10,8 +10,18 @@ export default function Testimonials() {
       author: "Karthik M., Backend Developer",
     },
     {
+      quote: "Prompt2SQL is a game-changer. It turns natural language into clean, executable SQL with zero friction. The UI is fast, intuitive, and beautifully designed. I can now focus on analyzing data instead of writing queries.",
+      author: "Avdhut. N., Tech Lead",
+    },
+    {
       quote: "From a natural question to SQL in seconds. Brilliant!",
       author: "Priya V., Business Analyst",
+      
+    },
+     {
+      quote: "An excellent tool for anyone who needs to generate SQL queries quickly. Highly recommend! without any technical knowledge.",
+      author: "Sachin.Kumbhar., Software Engineer",
+      
     },
   ];
 
