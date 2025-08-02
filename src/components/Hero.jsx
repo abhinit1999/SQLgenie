@@ -25,7 +25,7 @@ export default function Hero() {
         Our SaaS tool helps you generate and run SQL queries on any database — fast, smart, and easy.
       </p>
       <Link
-        to="/app"
+        to="https://promptsql.streamlit.app/"
         className="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
       >
         Try the App
