@@ -15,6 +15,12 @@ export default {
     lightText: '#111827',
     darkText: '#F3F4F6',
     borderGray: '#E5E7EB',
+    lightBg: "#fdfdfd",
+    lightText: "#333",
+    darkBg: "#0e0e0e",
+    darkText: "#fff",
+    primary: "#6366f1",
+    
   },
 }
   },
