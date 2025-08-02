@@ -1,12 +1,33 @@
-# React + Vite
+# 🧠 Prompt2SQL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Prompt2SQL is a modern, responsive web interface that converts natural language queries into SQL statements. Designed for developers, analysts, and enterprise teams, it simplifies data access by allowing users to describe what they want in plain English—and instantly receive valid SQL.
 
-Currently, two official plugins are available:
+## 📦 Folder Structure
+Prompt2SQL/ ├── public/ │   └── prompt2sql.svg         # Logo and static assets ├── src/ │   ├── components/            # Reusable UI components │   ├── pages/                 # Main views and layout │   ├── styles/                # Tailwind and custom styles │   └── utils/                 # Helper functions and logic ├── .gitignore                 # Files and folders to exclude from Git ├── index.html                # Entry point for the app ├── package.json              # Project metadata and dependencies └── vite.config.js            # Vite bundler configuratio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔍 Natural language to SQL conversion
+- ⚡ Fast and responsive UI built with React + Tailwind CSS
+- 🎨 Smooth transitions powered by Framer Motion
+- 🧠 Ready for backend LLM integration
+- 📱 Fully responsive layout for desktop and mobile
+- 💼 Enterprise-grade design and branding
+
+## 🛠️ Getting Started
+
+### 1. Clone the repository
+
+- git clone https://github.com/abhinit1999/SQLgenie.git
+- cd SQLgenie
+
+### 2. Install dependencies
+- npm install
+### 3. Start the development server
+- npm run dev
+###  Technologies Use
+- React
+- Tailwind CSS
+- Framer Motion
+- Vite
