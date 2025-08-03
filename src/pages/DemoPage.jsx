@@ -1,118 +1,4 @@
-// import React, { useState } from 'react';
-// import { FaCopy, FaSpinner } from 'react-icons/fa';
-// import toast, { Toaster } from 'react-hot-toast';
 
-// const DemoPage = () => {
-//   const [userQuery, setUserQuery] = useState('');
-//   const [sqlResult, setSqlResult] = useState(null);
-//   const [generatedSQL, setGeneratedSQL] = useState('');
-//   const [loading, setLoading] = useState(false);
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     setLoading(true);
-//     setSqlResult(null);
-//     setGeneratedSQL('');
-
-//     try {
-//       const response = await fetch('http://127.0.0.1:8000/query', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({ user_query: userQuery })
-//       });
-
-//       if (!response.ok) throw new Error('API Error');
-
-//       const data = await response.json();
-//       setGeneratedSQL(data.sql_query);
-//       setSqlResult(data.result);
-//       toast.success('SQL query generated successfully!');
-//       setUserQuery('');
-//     } catch (error) {
-//       toast.error('Failed to fetch SQL query.');
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   const handleCopy = () => {
-//     navigator.clipboard.writeText(generatedSQL);
-//     toast.success('Copied to clipboard!');
-//   };
-
-//   return (
-//     <div className="min-h-screen bg-black text-white px-4 py-10">
-//       <Toaster />
-//       <div className="max-w-3xl mx-auto border border-gold rounded-xl shadow-xl p-6 bg-gradient-to-b from-black via-gray-900 to-black text-center">
-//         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-blue-400">Prompt2SQL using AI</h1>
-//         <p className="mb-6 text-gray-300">Convert natural language into SQL queries using AI</p>
-
-//         <form onSubmit={handleSubmit} className="mb-8">
-//           <textarea
-//             className="w-full bg-gray-950 border border-blue-500 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gold resize-none"
-//             rows="4"
-//             placeholder="Enter your question (e.g. List all students in Data Science)..."
-//             value={userQuery}
-//             onChange={(e) => setUserQuery(e.target.value)}
-//             required
-//           ></textarea>
-//           <button
-//             type="submit"
-//             className="mt-4 bg-gradient-to-r from-blue-500 to-gold text-black font-semibold py-2 px-6 rounded-md hover:from-blue-400 hover:to-yellow-400 flex items-center gap-2"
-//             disabled={loading}
-//           >
-//             {loading ? (
-//               <span className="animate-spin"><FaSpinner /></span>
-//             ) : (
-//               'Generate SQL'
-//             )}
-//           </button>
-//         </form>
-
-//         {generatedSQL && (
-//           <div className="mb-6">
-//             <div className="flex justify-between items-center mb-2">
-//               <h3 className="text-lg font-semibold text-gold">Generated SQL</h3>
-//               <button onClick={handleCopy} className="text-blue-300 hover:text-gold transition-all">
-//                 <FaCopy />
-//               </button>
-//             </div>
-//             <div className="bg-gray-800 text-white p-4 rounded-md font-mono whitespace-pre-wrap">
-//               {generatedSQL}
-//             </div>
-//           </div>
-//         )}
-
-//         {sqlResult && (
-//           <div className="overflow-x-auto mt-4">
-//             <h3 className="text-lg font-semibold text-gold mb-2">Query Result</h3>
-//             <table className="min-w-full bg-gray-800 text-white rounded-md">
-//               <thead>
-//                 <tr>
-//                   {sqlResult.length > 0 &&
-//                     sqlResult[0].map((_, i) => (
-//                       <th key={i} className="text-left px-4 py-2 border-b border-gray-700">Column {i + 1}</th>
-//                     ))}
-//                 </tr>
-//               </thead>
-//               <tbody>
-//                 {sqlResult.map((row, i) => (
-//                   <tr key={i}>
-//                     {row.map((cell, j) => (
-//                       <td key={j} className="px-4 py-2 border-b border-gray-700">{cell}</td>
-//                     ))}
-//                   </tr>
-//                 ))}
-//               </tbody>
-//             </table>
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DemoPage;
 
 import React, { useState } from 'react';
 import { FaCopy, FaSpinner } from 'react-icons/fa';
@@ -131,7 +17,7 @@ const DemoPage = () => {
     setGeneratedSQL('');
 
     try {
-      const response = await fetch('https://server-prompt2sql.onrender.com', {
+      const response = await fetch('http://127.0.0.1:8000/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_query: userQuery })
