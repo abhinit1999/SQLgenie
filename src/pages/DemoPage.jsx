@@ -17,7 +17,7 @@ const DemoPage = () => {
     setGeneratedSQL('');
 
     try {
-      const response = await fetch('https://server-prompt2sql.onrender.com', {
+      const response = await fetch('https://server-prompt2sql.onrender.com/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_query: userQuery })
