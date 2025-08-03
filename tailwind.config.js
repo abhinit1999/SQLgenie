@@ -20,6 +20,11 @@ export default {
     darkBg: "#0e0e0e",
     darkText: "#fff",
     primary: "#6366f1",
+    golden: '#FFD700',
+  black: '#000000',
+  blue: {
+    DEFAULT: '#1E3A8A',
+    700: '#1D4ED8',
     
   },
 }

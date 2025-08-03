@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-4">
           <a href="#pricing" className="text-gray-700 dark:text-white hover:text-indigo-600">Pricing</a>
           <a href="#faq" className="text-gray-700 dark:text-white hover:text-indigo-600">FAQ</a>
-          <a href="https://promptsql.streamlit.app/" className="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700">Try App</a>
+          <a href="/app" className="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700">Try App</a>
           {/* <DarkModeToggle /> */}
         </div>
       </div>
